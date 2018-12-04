@@ -1,0 +1,3 @@
+backup-tmp-prodMount/
+backup-tmp-prodMount/MainFolder/***
+backup-tmp-prodMount/Public/***
