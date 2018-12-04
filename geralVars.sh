@@ -24,22 +24,23 @@ if [[ -n "$1" ]] && [[ -n "$2" ]]; then
 	# stores the result from ls in one variable
 	OUTPUT=$(ls $folders)
 
-	######################################################################################## Revision (20181204)
 	# http://www.tldp.org/LDP/abs/html/comparison-ops.html
 	# if the string not null
 	if  [ -n "$OUTPUT" ];
 		then
 
 		#http://tldp.org/LDP/abs/html/string-manipulation.html
-		# Coloca o conteudo da variavel num array
+		# puts the variable content in a array
 		array=($OUTPUT)
 
-		# Cria um array ordenado a partir do array anterior
+		# Creates an ordered array from the previous array
 		sorted=($(for a in "${array[@]}"; do echo $a; done | sort))
 
-		# guarda o comprimento do array
+		# stores the array length
 		arrayLength=${#sorted[*]}
 
+######################################################################################## Revision (20181204)
+		
 		# retira 1 ao comprimento do array para podermos excluir o link current
 		# que se encontra na ultima posicao da lista
 		arrayLength=$(($arrayLength-1))
